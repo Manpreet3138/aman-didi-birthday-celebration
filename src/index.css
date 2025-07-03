@@ -8,35 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 315 100% 98%;
+    --foreground: 340 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 340 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 340 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 320 80% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 50 100% 70%;
+    --secondary-foreground: 340 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 315 30% 95%;
+    --muted-foreground: 340 20% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 315 20% 85%;
+    --input: 315 20% 85%;
+    --ring: 320 80% 60%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Birthday theme colors */
+    --birthday-pink: 320 80% 60%;
+    --birthday-gold: 45 100% 60%;
+    --birthday-purple: 280 100% 70%;
+    --birthday-blue: 200 100% 70%;
+    --birthday-green: 120 60% 60%;
+    --birthday-red: 0 80% 60%;
+    
+    /* Gradients */
+    --gradient-celebration: linear-gradient(135deg, hsl(var(--birthday-pink)), hsl(var(--birthday-purple)));
+    --gradient-balloons: linear-gradient(45deg, hsl(var(--birthday-gold)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(var(--birthday-pink) / 0.1));
+    
+    /* Shadows */
+    --shadow-celebration: 0 20px 40px hsl(var(--birthday-pink) / 0.3);
+    --shadow-balloon: 0 10px 30px hsl(var(--birthday-gold) / 0.4);
+    
+    /* Animations */
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +122,20 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Birthday Animation Classes */
+  .balloon {
+    @apply fixed rounded-full shadow-[var(--shadow-balloon)] animate-float;
+  }
+  
+  .birthday-text {
+    @apply bg-gradient-to-r from-[hsl(var(--birthday-pink))] to-[hsl(var(--birthday-purple))] bg-clip-text text-transparent;
+  }
+  
+  .celebration-card {
+    @apply bg-card border border-border rounded-[var(--radius)] shadow-[var(--shadow-celebration)] backdrop-blur-sm;
   }
 }
