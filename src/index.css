@@ -142,27 +142,47 @@ All colors MUST be HSL.
   /* Birthday Cake Animation */
   .cake-container {
     @apply relative w-32 h-32 mx-auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2px;
+    position: relative;
   }
 
-  .cake-piece {
-    @apply text-2xl flex items-center justify-center transition-all duration-500;
-    transform-origin: center;
+  .whole-cake {
+    @apply transition-all duration-300 hover:scale-110;
   }
 
-  .cake-piece.animate-slice {
-    animation: slice-away 2s ease-out forwards;
+  .cake-piece-separate {
+    @apply absolute text-3xl;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  .piece-0.animate-slice { transform: translate(-20px, -20px) rotate(-15deg) scale(0.8); }
-  .piece-1.animate-slice { transform: translate(0px, -25px) rotate(-5deg) scale(0.8); }
-  .piece-2.animate-slice { transform: translate(0px, -25px) rotate(5deg) scale(0.8); }
-  .piece-3.animate-slice { transform: translate(20px, -20px) rotate(15deg) scale(0.8); }
-  .piece-4.animate-slice { transform: translate(-25px, 0px) rotate(-25deg) scale(0.8); }
-  .piece-5.animate-slice { transform: translate(-15px, 10px) rotate(-10deg) scale(0.8); }
-  .piece-6.animate-slice { transform: translate(15px, 10px) rotate(10deg) scale(0.8); }
-  .piece-7.animate-slice { transform: translate(25px, 0px) rotate(25deg) scale(0.8); }
+  .cake-piece-separate.animate-slice {
+    animation: slice-away 1.5s ease-out forwards;
+  }
+
+  .piece-0.animate-slice { 
+    animation: slice-0 1.5s ease-out forwards;
+  }
+  .piece-1.animate-slice { 
+    animation: slice-1 1.5s ease-out forwards;
+  }
+  .piece-2.animate-slice { 
+    animation: slice-2 1.5s ease-out forwards;
+  }
+  .piece-3.animate-slice { 
+    animation: slice-3 1.5s ease-out forwards;
+  }
+  .piece-4.animate-slice { 
+    animation: slice-4 1.5s ease-out forwards;
+  }
+  .piece-5.animate-slice { 
+    animation: slice-5 1.5s ease-out forwards;
+  }
+  .piece-6.animate-slice { 
+    animation: slice-6 1.5s ease-out forwards;
+  }
+  .piece-7.animate-slice { 
+    animation: slice-7 1.5s ease-out forwards;
+  }
 }

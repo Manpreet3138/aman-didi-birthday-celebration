@@ -89,17 +89,25 @@ const Index = () => {
     <div className="flex flex-col items-center mt-8 cursor-pointer" onClick={handleCakeClick}>
       <div className="relative">
         <div className={`cake-container ${cakeSliced ? 'sliced' : ''}`}>
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className={`cake-piece piece-${i} ${cakeSliced ? 'animate-slice' : ''}`}
-              style={{
-                animationDelay: `${i * 0.1}s`
-              }}
-            >
-              🍰
+          {cakeSliced ? (
+            // Show 8 separate cake pieces flying apart
+            [...Array(8)].map((_, i) => (
+              <div
+                key={i}
+                className={`cake-piece-separate piece-${i} animate-slice`}
+                style={{
+                  animationDelay: `${i * 0.1}s`
+                }}
+              >
+                🧁
+              </div>
+            ))
+          ) : (
+            // Show whole cake
+            <div className="whole-cake text-8xl">
+              🎂
             </div>
-          ))}
+          )}
         </div>
         <div className="text-center mt-4">
           <p className="text-lg birthday-text font-semibold">

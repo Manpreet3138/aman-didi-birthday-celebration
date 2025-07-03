@@ -147,6 +147,38 @@ export default {
 						transform: 'translateY(0)',
 						opacity: '1'
 					}
+				},
+				'slice-0': {
+					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
+					'100%': { transform: 'translate(-150%, -150%) scale(0.7) rotate(-45deg)', opacity: '0.8' }
+				},
+				'slice-1': {
+					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
+					'100%': { transform: 'translate(-50%, -200%) scale(0.7) rotate(-15deg)', opacity: '0.8' }
+				},
+				'slice-2': {
+					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
+					'100%': { transform: 'translate(50%, -200%) scale(0.7) rotate(15deg)', opacity: '0.8' }
+				},
+				'slice-3': {
+					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
+					'100%': { transform: 'translate(150%, -150%) scale(0.7) rotate(45deg)', opacity: '0.8' }
+				},
+				'slice-4': {
+					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
+					'100%': { transform: 'translate(-200%, -50%) scale(0.7) rotate(-60deg)', opacity: '0.8' }
+				},
+				'slice-5': {
+					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
+					'100%': { transform: 'translate(-100%, 100%) scale(0.7) rotate(-30deg)', opacity: '0.8' }
+				},
+				'slice-6': {
+					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
+					'100%': { transform: 'translate(100%, 100%) scale(0.7) rotate(30deg)', opacity: '0.8' }
+				},
+				'slice-7': {
+					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
+					'100%': { transform: 'translate(200%, -50%) scale(0.7) rotate(60deg)', opacity: '0.8' }
 				}
 			},
 			animation: {
@@ -156,7 +188,8 @@ export default {
 				'bounce-in': 'bounce-in 1s ease-out',
 				'fly-balloon': 'fly-balloon 8s ease-in-out infinite',
 				'tada': 'tada 2s ease-in-out',
-				'slide-up': 'slide-up 0.8s ease-out'
+				'slide-up': 'slide-up 0.8s ease-out',
+				'slice': 'slice-0 1.5s ease-out forwards'
 			}
 		}
 	},
