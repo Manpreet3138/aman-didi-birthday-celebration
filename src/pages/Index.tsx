@@ -87,7 +87,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-[hsl(var(--birthday-pink)/0.1)] overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-background via-[hsl(var(--birthday-pink)/0.05)] to-[hsl(var(--birthday-purple)/0.08)] overflow-x-hidden">
       <FlyingBalloons />
       <HeroSection 
         visibleSections={visibleSections}

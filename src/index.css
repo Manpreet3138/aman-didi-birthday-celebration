@@ -38,22 +38,26 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
-    /* Birthday theme colors */
-    --birthday-pink: 320 80% 60%;
-    --birthday-gold: 45 100% 60%;
-    --birthday-purple: 280 100% 70%;
-    --birthday-blue: 200 100% 70%;
-    --birthday-green: 120 60% 60%;
-    --birthday-red: 0 80% 60%;
+    /* Birthday theme colors - More joyful and vibrant */
+    --birthday-pink: 330 100% 70%;
+    --birthday-gold: 45 100% 65%;
+    --birthday-purple: 270 100% 75%;
+    --birthday-blue: 200 100% 75%;
+    --birthday-green: 120 70% 65%;
+    --birthday-red: 0 90% 70%;
+    --birthday-orange: 25 100% 70%;
+    --birthday-cyan: 180 100% 70%;
     
-    /* Gradients */
-    --gradient-celebration: linear-gradient(135deg, hsl(var(--birthday-pink)), hsl(var(--birthday-purple)));
-    --gradient-balloons: linear-gradient(45deg, hsl(var(--birthday-gold)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(var(--birthday-pink) / 0.1));
+    /* Gradients - More colorful and joyful */
+    --gradient-celebration: linear-gradient(135deg, hsl(var(--birthday-pink)), hsl(var(--birthday-purple)), hsl(var(--birthday-gold)));
+    --gradient-balloons: linear-gradient(45deg, hsl(var(--birthday-gold)), hsl(var(--secondary)), hsl(var(--birthday-cyan)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(var(--birthday-pink) / 0.2), hsl(var(--birthday-purple) / 0.1));
+    --gradient-rainbow: linear-gradient(90deg, hsl(var(--birthday-red)), hsl(var(--birthday-orange)), hsl(var(--birthday-gold)), hsl(var(--birthday-green)), hsl(var(--birthday-blue)), hsl(var(--birthday-purple)));
     
-    /* Shadows */
-    --shadow-celebration: 0 20px 40px hsl(var(--birthday-pink) / 0.3);
-    --shadow-balloon: 0 10px 30px hsl(var(--birthday-gold) / 0.4);
+    /* Shadows - More vibrant */
+    --shadow-celebration: 0 20px 40px hsl(var(--birthday-pink) / 0.4);
+    --shadow-balloon: 0 10px 30px hsl(var(--birthday-gold) / 0.5);
+    --shadow-rainbow: 0 15px 35px hsl(var(--birthday-purple) / 0.3);
     
     /* Animations */
     --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -132,11 +136,12 @@ All colors MUST be HSL.
   }
   
   .birthday-text {
-    @apply bg-gradient-to-r from-[hsl(var(--birthday-pink))] to-[hsl(var(--birthday-purple))] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(var(--birthday-pink))] via-[hsl(var(--birthday-purple))] to-[hsl(var(--birthday-gold))] bg-clip-text text-transparent;
   }
   
   .celebration-card {
-    @apply bg-card border border-border rounded-[var(--shadow-celebration)] backdrop-blur-sm;
+    @apply bg-card border border-border rounded-[var(--radius)] backdrop-blur-sm;
+    box-shadow: var(--shadow-rainbow);
   }
 
   /* Birthday Cake Animation */
@@ -172,5 +177,10 @@ All colors MUST be HSL.
   }
   .piece-3.animate-slice { 
     animation: slice-3 1.5s ease-out forwards;
+  }
+
+  /* Joyful pulse animation for interactive elements */
+  .joyful-pulse {
+    animation: joyful-pulse 2s ease-in-out infinite;
   }
 }

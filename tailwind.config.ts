@@ -163,6 +163,16 @@ export default {
 				'slice-3': {
 					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
 					'100%': { transform: 'translate(150%, 150%) scale(0.7) rotate(45deg)', opacity: '0.8' }
+				},
+				'joyful-pulse': {
+					'0%, 100%': { 
+						transform: 'scale(1)',
+						filter: 'hue-rotate(0deg) saturate(1)'
+					},
+					'50%': { 
+						transform: 'scale(1.05)',
+						filter: 'hue-rotate(30deg) saturate(1.3)'
+					}
 				}
 			},
 			animation: {
@@ -173,7 +183,8 @@ export default {
 				'fly-balloon': 'fly-balloon 8s ease-in-out infinite',
 				'tada': 'tada 2s ease-in-out',
 				'slide-up': 'slide-up 0.8s ease-out',
-				'slice': 'slice-0 1.5s ease-out forwards'
+				'slice': 'slice-0 1.5s ease-out forwards',
+				'joyful-pulse': 'joyful-pulse 2s ease-in-out infinite'
 			}
 		}
 	},
