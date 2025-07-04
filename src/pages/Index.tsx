@@ -11,11 +11,9 @@ const Index = () => {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const [cakeSliced, setCakeSliced] = useState(false);
   const [uploadedVideo, setUploadedVideo] = useState<string | null>(null);
-  const [uploadedEndVideo, setUploadedEndVideo] = useState<string | null>(null);
   const [uploadedImages, setUploadedImages] = useState<string[]>([]);
   const audioRef = useRef(null);
   const videoRef = useRef(null);
-  const endVideoRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,10 +30,6 @@ const Index = () => {
             // Auto-play videos when sections are visible
             if (entry.target.id === 'gallery' && videoRef.current) {
               videoRef.current.play().catch(console.log);
-            }
-            
-            if (entry.target.id === 'section5' && endVideoRef.current) {
-              endVideoRef.current.play().catch(console.log);
             }
           }
         });
@@ -68,13 +62,6 @@ const Index = () => {
     }
   };
 
-  const handleEndVideoUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const videoUrl = URL.createObjectURL(file);
-      setUploadedEndVideo(videoUrl);
-    }
-  };
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
@@ -112,9 +99,6 @@ const Index = () => {
       />
       <FinalWishesSection 
         visibleSections={visibleSections}
-        uploadedEndVideo={uploadedEndVideo}
-        endVideoRef={endVideoRef}
-        onEndVideoUpload={handleEndVideoUpload}
       />
     </div>
   );

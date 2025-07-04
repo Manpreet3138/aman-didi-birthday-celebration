@@ -1,15 +1,10 @@
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { RefObject } from 'react';
 
 interface FinalWishesSectionProps {
   visibleSections: Set<string>;
-  uploadedEndVideo: string | null;
-  endVideoRef: RefObject<HTMLVideoElement>;
-  onEndVideoUpload: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const FinalWishesSection = ({ visibleSections, uploadedEndVideo, endVideoRef, onEndVideoUpload }: FinalWishesSectionProps) => (
+const FinalWishesSection = ({ visibleSections }: FinalWishesSectionProps) => (
   <section id="section5" className="min-h-screen flex items-center justify-center py-20 px-4">
     <div className="max-w-4xl mx-auto text-center">
       <h2 className={`text-4xl md:text-5xl font-bold birthday-text mb-12 ${
@@ -21,34 +16,6 @@ const FinalWishesSection = ({ visibleSections, uploadedEndVideo, endVideoRef, on
       <Card className={`celebration-card p-8 mb-8 ${
         visibleSections.has('section5') ? 'animate-slide-up animation-delay-300' : 'opacity-0'
       }`}>
-        {uploadedEndVideo ? (
-          <div className="aspect-video bg-black rounded-lg overflow-hidden mb-6">
-            <video
-              ref={endVideoRef}
-              className="w-full h-full object-cover"
-              controls
-              muted
-              loop
-            >
-              <source src={uploadedEndVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        ) : (
-          <div className="aspect-video bg-gradient-to-br from-muted to-accent/20 rounded-lg flex items-center justify-center border-2 border-dashed border-accent mb-6">
-            <div className="text-center">
-              <div className="text-5xl mb-4">🎥</div>
-              <p className="text-lg birthday-text font-semibold mb-4">Upload Final Special Video</p>
-              <Input
-                type="file"
-                accept="video/*"
-                onChange={onEndVideoUpload}
-                className="max-w-xs mx-auto"
-              />
-            </div>
-          </div>
-        )}
-
         <div className="space-y-6">
           <div className="bg-muted rounded-lg p-6">
             <blockquote className="text-lg md:text-xl italic text-foreground">
