@@ -154,31 +154,15 @@ export default {
 				},
 				'slice-1': {
 					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
-					'100%': { transform: 'translate(-50%, -200%) scale(0.7) rotate(-15deg)', opacity: '0.8' }
+					'100%': { transform: 'translate(150%, -150%) scale(0.7) rotate(45deg)', opacity: '0.8' }
 				},
 				'slice-2': {
 					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
-					'100%': { transform: 'translate(50%, -200%) scale(0.7) rotate(15deg)', opacity: '0.8' }
+					'100%': { transform: 'translate(-150%, 150%) scale(0.7) rotate(-45deg)', opacity: '0.8' }
 				},
 				'slice-3': {
 					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
-					'100%': { transform: 'translate(150%, -150%) scale(0.7) rotate(45deg)', opacity: '0.8' }
-				},
-				'slice-4': {
-					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
-					'100%': { transform: 'translate(-200%, -50%) scale(0.7) rotate(-60deg)', opacity: '0.8' }
-				},
-				'slice-5': {
-					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
-					'100%': { transform: 'translate(-100%, 100%) scale(0.7) rotate(-30deg)', opacity: '0.8' }
-				},
-				'slice-6': {
-					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
-					'100%': { transform: 'translate(100%, 100%) scale(0.7) rotate(30deg)', opacity: '0.8' }
-				},
-				'slice-7': {
-					'0%': { transform: 'translate(-50%, -50%) scale(1) rotate(0deg)' },
-					'100%': { transform: 'translate(200%, -50%) scale(0.7) rotate(60deg)', opacity: '0.8' }
+					'100%': { transform: 'translate(150%, 150%) scale(0.7) rotate(45deg)', opacity: '0.8' }
 				}
 			},
 			animation: {
