@@ -8,14 +8,14 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 315 100% 98%;
-    --foreground: 340 20% 15%;
+    --background: 340 15% 8%;
+    --foreground: 315 20% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 340 20% 15%;
+    --card: 340 10% 12%;
+    --card-foreground: 315 20% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 340 20% 15%;
+    --popover: 340 10% 12%;
+    --popover-foreground: 315 20% 85%;
 
     --primary: 320 80% 60%;
     --primary-foreground: 0 0% 100%;
@@ -23,8 +23,8 @@ All colors MUST be HSL.
     --secondary: 50 100% 70%;
     --secondary-foreground: 340 20% 15%;
 
-    --muted: 315 30% 95%;
-    --muted-foreground: 340 20% 50%;
+    --muted: 340 15% 18%;
+    --muted-foreground: 315 20% 65%;
 
     --accent: 280 100% 70%;
     --accent-foreground: 0 0% 100%;
@@ -32,8 +32,8 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 315 20% 85%;
-    --input: 315 20% 85%;
+    --border: 340 20% 25%;
+    --input: 340 15% 18%;
     --ring: 320 80% 60%;
 
     --radius: 1rem;
@@ -125,7 +125,11 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-dancing;
   }
 }
 

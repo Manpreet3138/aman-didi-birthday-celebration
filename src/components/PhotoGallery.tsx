@@ -14,14 +14,14 @@ const PhotoGallery = ({ visibleSections, uploadedImages, onImageUpload }: PhotoG
       <h2 className={`text-4xl md:text-5xl font-bold birthday-text text-center mb-12 ${
         visibleSections.has('section4') ? 'animate-slide-up' : 'opacity-0'
       }`}>
-        Memories & Memes 😄
+        Funny Memes 😂
       </h2>
       
       <Card className={`celebration-card p-8 mb-8 ${
         visibleSections.has('section4') ? 'animate-slide-up animation-delay-300' : 'opacity-0'
       }`}>
         <div className="text-center mb-6">
-          <p className="text-lg birthday-text font-semibold mb-4">Upload Photos & Memes</p>
+          <p className="text-lg birthday-text font-semibold mb-4">Upload More Memes</p>
           <Input
             type="file"
             accept="image/*"
