@@ -41,11 +41,11 @@ const PhotoGallery = ({ visibleSections, uploadedImages, onImageUpload }: PhotoG
               {uploadedImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="celebration-card p-2">
-                    <div className="aspect-square">
+                    <div className="flex items-center justify-center min-h-[200px] max-h-[400px] bg-muted/20 rounded-lg overflow-hidden">
                       <img
                         src={image}
                         alt={`Memory ${index + 1}`}
-                        className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                        className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   </Card>

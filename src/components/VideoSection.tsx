@@ -22,10 +22,10 @@ const VideoSection = ({ visibleSections, uploadedVideo, videoRef, onVideoUpload 
         visibleSections.has('gallery') ? 'animate-slide-up animation-delay-500' : 'opacity-0'
       }`}>
         {uploadedVideo ? (
-          <div className="aspect-video bg-black rounded-lg overflow-hidden">
+          <div className="bg-black rounded-lg overflow-hidden flex items-center justify-center min-h-[400px]">
             <video
               ref={videoRef}
-              className="w-full h-full object-cover"
+              className="max-w-full max-h-[70vh] object-contain"
               controls
               muted
               loop
