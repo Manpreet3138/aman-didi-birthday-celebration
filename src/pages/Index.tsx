@@ -8,6 +8,7 @@ import FinalWishesSection from '@/components/FinalWishesSection';
 
 const Index = () => {
   const [audioPlaying, setAudioPlaying] = useState(false);
+  const [backgroundMusicPlaying, setBackgroundMusicPlaying] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const [cakeSliced, setCakeSliced] = useState(false);
   const [uploadedVideo, setUploadedVideo] = useState<string | null>(null);
@@ -26,6 +27,7 @@ const Index = () => {
   
   const [uploadedImages, setUploadedImages] = useState<string[]>(defaultMemes);
   const audioRef = useRef(null);
+  const backgroundMusicRef = useRef(null);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -38,6 +40,11 @@ const Index = () => {
             // Auto-play birthday song when congratulations section is visible
             if (entry.target.id === 'congratulations' && !audioPlaying) {
               playBirthdaySong();
+            }
+            
+            // Start background music when hero section is visible
+            if (entry.target.id === 'hero' && !backgroundMusicPlaying) {
+              playBackgroundMusic();
             }
             
             // Auto-play videos when sections are visible
@@ -55,7 +62,7 @@ const Index = () => {
     });
 
     return () => observer.disconnect();
-  }, [audioPlaying]);
+  }, [audioPlaying, backgroundMusicPlaying]);
 
   const playBirthdaySong = () => {
     if (!audioPlaying && audioRef.current) {
@@ -67,11 +74,25 @@ const Index = () => {
     }
   };
 
+  const playBackgroundMusic = () => {
+    if (!backgroundMusicPlaying && backgroundMusicRef.current) {
+      backgroundMusicRef.current.play().catch(() => {
+        console.log("Background music playback requires user interaction");
+      });
+      setBackgroundMusicPlaying(true);
+    }
+  };
+
   const handleVideoUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      const videoUrl = URL.createObjectURL(file);
-      setUploadedVideo(videoUrl);
+      // Create a permanent copy in public folder
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const videoData = e.target?.result as string;
+        setUploadedVideo(videoData);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -113,6 +134,17 @@ const Index = () => {
       <FinalWishesSection 
         visibleSections={visibleSections}
       />
+      
+      {/* Background Music */}
+      <audio
+        ref={backgroundMusicRef}
+        loop
+        className="hidden"
+        preload="auto"
+      >
+        <source src="/background-song.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
     </div>
   );
 };
