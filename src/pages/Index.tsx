@@ -5,6 +5,8 @@ import CongratulationsSection from '@/components/CongratulationsSection';
 import VideoSection from '@/components/VideoSection';
 import PhotoGallery from '@/components/PhotoGallery';
 import FinalWishesSection from '@/components/FinalWishesSection';
+import MovingCharacter from '@/components/MovingCharacter';
+import AudioController from '@/components/AudioController';
 
 const Index = () => {
   const [audioPlaying, setAudioPlaying] = useState(false);
@@ -109,6 +111,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-[hsl(var(--birthday-pink)/0.05)] to-[hsl(var(--birthday-purple)/0.08)] overflow-x-hidden">
+      <AudioController />
+      <MovingCharacter />
       <FlyingBalloons />
       <HeroSection 
         visibleSections={visibleSections}
@@ -134,17 +138,6 @@ const Index = () => {
       <FinalWishesSection 
         visibleSections={visibleSections}
       />
-      
-      {/* Background Music */}
-      <audio
-        ref={backgroundMusicRef}
-        loop
-        className="hidden"
-        preload="auto"
-      >
-        <source src="/background-song.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
     </div>
   );
 };
