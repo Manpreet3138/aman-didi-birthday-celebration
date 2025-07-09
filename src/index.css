@@ -182,8 +182,66 @@ All colors MUST be HSL.
   .piece-3.animate-slice { 
     animation: slice-3 1.5s ease-out forwards;
   }
+  .piece-4.animate-slice { 
+    animation: slice-4 1.5s ease-out forwards;
+  }
+  .piece-5.animate-slice { 
+    animation: slice-5 1.5s ease-out forwards;
+  }
+  .piece-6.animate-slice { 
+    animation: slice-6 1.5s ease-out forwards;
+  }
+  .piece-7.animate-slice { 
+    animation: slice-7 1.5s ease-out forwards;
+  }
+
+  /* Keyframes for cake pieces flying in different directions */
+  @keyframes slice-0 {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: translate(-150px, -150px) scale(0.5) rotate(360deg); opacity: 0; }
+  }
+
+  @keyframes slice-1 {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: translate(0px, -150px) scale(0.5) rotate(-360deg); opacity: 0; }
+  }
+
+  @keyframes slice-2 {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: translate(150px, -150px) scale(0.5) rotate(360deg); opacity: 0; }
+  }
+
+  @keyframes slice-3 {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: translate(150px, 0px) scale(0.5) rotate(-360deg); opacity: 0; }
+  }
+
+  @keyframes slice-4 {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: translate(150px, 150px) scale(0.5) rotate(360deg); opacity: 0; }
+  }
+
+  @keyframes slice-5 {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: translate(0px, 150px) scale(0.5) rotate(-360deg); opacity: 0; }
+  }
+
+  @keyframes slice-6 {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: translate(-150px, 150px) scale(0.5) rotate(360deg); opacity: 0; }
+  }
+
+  @keyframes slice-7 {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: translate(-150px, 0px) scale(0.5) rotate(-360deg); opacity: 0; }
+  }
 
   /* Joyful pulse animation for interactive elements */
+  @keyframes joyful-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+  }
+
   .joyful-pulse {
     animation: joyful-pulse 2s ease-in-out infinite;
   }
