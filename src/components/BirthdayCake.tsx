@@ -8,8 +8,8 @@ const BirthdayCake = ({ cakeSliced, onCakeClick }: BirthdayCakeProps) => (
     <div className="relative">
       <div className={`cake-container ${cakeSliced ? 'sliced' : ''}`}>
         {cakeSliced ? (
-          // Show 4 separate cake pieces flying apart
-          [...Array(4)].map((_, i) => (
+          // Show 8 separate cake pieces flying apart
+          [...Array(8)].map((_, i) => (
             <div
               key={i}
               className={`cake-piece-separate piece-${i} animate-slice`}
