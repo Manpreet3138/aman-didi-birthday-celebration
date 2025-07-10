@@ -20,7 +20,7 @@ const FinalWishesSection = ({ visibleSections }: FinalWishesSectionProps) => (
         <img 
           src="/lovable-uploads/9acdc1be-390e-4c04-bedc-5ecd97d3fefe.png" 
           alt="Best wishes" 
-          className="w-56 h-32 md:w-64 md:h-36 object-cover rounded-lg border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
+          className="w-80 h-48 md:w-96 md:h-64 object-cover rounded-2xl border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
         />
       </div>
       
