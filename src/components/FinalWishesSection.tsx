@@ -13,6 +13,17 @@ const FinalWishesSection = ({ visibleSections }: FinalWishesSectionProps) => (
         Best Wishes for Your Future ✨
       </h2>
       
+      {/* Best wishes sticker */}
+      <div className={`flex justify-center mb-8 ${
+        visibleSections.has('section5') ? 'animate-slide-up animation-delay-200' : 'opacity-0'
+      }`}>
+        <img 
+          src="/lovable-uploads/9acdc1be-390e-4c04-bedc-5ecd97d3fefe.png" 
+          alt="Best wishes" 
+          className="w-56 h-32 md:w-64 md:h-36 object-cover rounded-lg border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+      
       <Card className={`celebration-card p-8 mb-8 ${
         visibleSections.has('section5') ? 'animate-slide-up animation-delay-300' : 'opacity-0'
       }`}>

@@ -18,6 +18,17 @@ const VideoSection = ({ visibleSections, uploadedVideo, videoRef, onVideoUpload 
         Special Moments 🎬
       </h2>
       
+      {/* Special moments sticker */}
+      <div className={`flex justify-center mb-8 ${
+        visibleSections.has('gallery') ? 'animate-slide-up animation-delay-300' : 'opacity-0'
+      }`}>
+        <img 
+          src="/lovable-uploads/154f73af-b3dd-4f09-a3a6-2a232d1ebd6c.png" 
+          alt="Special family moments" 
+          className="w-48 h-32 md:w-56 md:h-36 object-cover rounded-lg border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+      
       <Card className={`celebration-card p-8 ${
         visibleSections.has('gallery') ? 'animate-slide-up animation-delay-500' : 'opacity-0'
       }`}>

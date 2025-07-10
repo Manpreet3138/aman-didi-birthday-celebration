@@ -16,6 +16,15 @@ const CongratulationsSection = ({ visibleSections, audioPlaying, audioRef }: Con
         <h2 className="text-4xl md:text-5xl font-bold birthday-text mb-8">
           Congratulations! 🎊
         </h2>
+        
+        {/* Celebration sticker */}
+        <div className="flex justify-center mb-8">
+          <img 
+            src="/lovable-uploads/89cad97a-6c6f-4067-ba1f-a627b8bef25c.png" 
+            alt="Birthday celebration" 
+            className="w-40 h-32 md:w-48 md:h-36 object-cover rounded-lg border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
+          />
+        </div>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
           Celebrating your amazing <span className="birthday-text font-bold">28th birthday</span>! 
           May this new year of your life be filled with joy, love, laughter, and countless beautiful moments.

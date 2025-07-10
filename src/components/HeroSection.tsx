@@ -17,6 +17,15 @@ const HeroSection = ({ visibleSections, cakeSliced, onCakeClick }: HeroSectionPr
       <h2 className="text-4xl md:text-6xl font-semibold text-accent mb-12 animate-bounce-in animation-delay-500">
         Aman Didi! 🎉
       </h2>
+      
+      {/* Birthday sticker */}
+      <div className="flex justify-center mb-8">
+        <img 
+          src="/lovable-uploads/6920d9af-fd39-4e72-9b7b-9ab87d1fab47.png" 
+          alt="Aman Didi" 
+          className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full border-4 border-primary/30 shadow-lg animate-bounce-in animation-delay-700 hover:scale-105 transition-transform duration-300"
+        />
+      </div>
       <div className="flex justify-center space-x-4 text-4xl animate-bounce-in animation-delay-1000">
         <span className="animate-float animation-delay-200">🎂</span>
         <span className="animate-float animation-delay-400">🎈</span>
