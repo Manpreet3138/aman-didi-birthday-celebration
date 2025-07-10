@@ -24,7 +24,7 @@ const PhotoGallery = ({ visibleSections, uploadedImages, onImageUpload }: PhotoG
         <img 
           src="/lovable-uploads/0058b61c-f766-49ff-a2b5-b2795bbaacbf.png" 
           alt="Funny moments" 
-          className="w-48 h-64 md:w-56 md:h-72 object-cover rounded-2xl border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
+          className="w-36 h-48 md:w-42 md:h-56 object-cover rounded-2xl border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
         />
       </div>
       

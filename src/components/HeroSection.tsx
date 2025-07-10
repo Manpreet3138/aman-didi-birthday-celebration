@@ -23,7 +23,7 @@ const HeroSection = ({ visibleSections, cakeSliced, onCakeClick }: HeroSectionPr
         <img 
           src="/lovable-uploads/6920d9af-fd39-4e72-9b7b-9ab87d1fab47.png" 
           alt="Aman Didi" 
-          className="w-48 h-64 md:w-56 md:h-72 object-cover rounded-2xl border-4 border-primary/30 shadow-lg animate-bounce-in animation-delay-700 hover:scale-105 transition-transform duration-300"
+          className="w-36 h-48 md:w-42 md:h-56 object-cover rounded-2xl border-4 border-primary/30 shadow-lg animate-bounce-in animation-delay-700 hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div className="flex justify-center space-x-4 text-4xl animate-bounce-in animation-delay-1000">
