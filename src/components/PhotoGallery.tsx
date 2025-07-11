@@ -43,19 +43,6 @@ const PhotoGallery = ({ visibleSections, uploadedImages }: PhotoGalleryProps) =>
         </div>
       )}
 
-      {uploadedImages.length === 0 && (
-        <div className={`text-center ${
-          visibleSections.has('section4') ? 'animate-slide-up animation-delay-500' : 'opacity-0'
-        }`}>
-          <div className="aspect-video bg-gradient-to-br from-muted to-accent/20 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">📷</div>
-              <p className="text-xl birthday-text font-semibold">Waiting for your amazing photos!</p>
-              <p className="text-muted-foreground mt-2">Upload multiple images to create a scrollable gallery</p>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   </section>
 );
