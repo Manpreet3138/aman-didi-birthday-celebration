@@ -8,10 +8,10 @@ interface PhotoGalleryProps {
 }
 
 const PhotoGallery = ({ visibleSections, uploadedImages }: PhotoGalleryProps) => (
-  <section id="section4" className="min-h-screen flex items-center justify-center py-20 px-4">
+  <section id="gallery-section" className="min-h-screen flex items-center justify-center py-20 px-4">
     <div className="max-w-6xl mx-auto">
       <h2 className={`text-4xl md:text-5xl font-bold birthday-text text-center mb-12 ${
-        visibleSections.has('section4') ? 'animate-slide-up' : 'opacity-0'
+        visibleSections.has('gallery-section') ? 'animate-slide-up' : 'opacity-0'
       }`}>
         Funny Memes 😂
       </h2>
@@ -19,7 +19,7 @@ const PhotoGallery = ({ visibleSections, uploadedImages }: PhotoGalleryProps) =>
 
       {uploadedImages.length > 0 && (
         <div className={`${
-          visibleSections.has('section4') ? 'animate-slide-up animation-delay-500' : 'opacity-0'
+          visibleSections.has('gallery-section') ? 'animate-slide-up animation-delay-500' : 'opacity-0'
         }`}>
           <Carousel className="w-full max-w-4xl mx-auto">
             <CarouselContent className="-ml-4">
