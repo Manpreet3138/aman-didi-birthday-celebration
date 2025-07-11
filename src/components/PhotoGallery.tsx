@@ -5,10 +5,9 @@ import { Input } from "@/components/ui/input";
 interface PhotoGalleryProps {
   visibleSections: Set<string>;
   uploadedImages: string[];
-  onImageUpload: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const PhotoGallery = ({ visibleSections, uploadedImages, onImageUpload }: PhotoGalleryProps) => (
+const PhotoGallery = ({ visibleSections, uploadedImages }: PhotoGalleryProps) => (
   <section id="section4" className="min-h-screen flex items-center justify-center py-20 px-4">
     <div className="max-w-6xl mx-auto">
       <h2 className={`text-4xl md:text-5xl font-bold birthday-text text-center mb-12 ${
@@ -17,31 +16,6 @@ const PhotoGallery = ({ visibleSections, uploadedImages, onImageUpload }: PhotoG
         Funny Memes 😂
       </h2>
       
-      {/* Funny moments sticker */}
-      <div className={`flex justify-center mb-8 ${
-        visibleSections.has('section4') ? 'animate-slide-up animation-delay-200' : 'opacity-0'
-      }`}>
-        <img 
-          src="/lovable-uploads/0058b61c-f766-49ff-a2b5-b2795bbaacbf.png" 
-          alt="Funny moments" 
-          className="w-36 h-48 md:w-42 md:h-56 object-cover rounded-2xl border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-      </div>
-      
-      <Card className={`celebration-card p-8 mb-8 ${
-        visibleSections.has('section4') ? 'animate-slide-up animation-delay-300' : 'opacity-0'
-      }`}>
-        <div className="text-center mb-6">
-          <p className="text-lg birthday-text font-semibold mb-4">Upload More Memes</p>
-          <Input
-            type="file"
-            accept="image/*"
-            multiple
-            onChange={onImageUpload}
-            className="max-w-md mx-auto"
-          />
-        </div>
-      </Card>
 
       {uploadedImages.length > 0 && (
         <div className={`${
