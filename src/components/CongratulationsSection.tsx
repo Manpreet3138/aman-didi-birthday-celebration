@@ -22,7 +22,7 @@ const CongratulationsSection = ({ visibleSections, audioPlaying, audioRef }: Con
           <img 
             src="/lovable-uploads/89cad97a-6c6f-4067-ba1f-a627b8bef25c.png" 
             alt="Birthday celebration" 
-            className="w-48 h-36 md:w-60 md:h-45 object-cover rounded-2xl border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
+            className="w-48 h-36 md:w-60 md:h-45 object-contain rounded-2xl border-2 border-primary/30 shadow-lg hover:scale-105 transition-transform duration-300"
           />
         </div>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
