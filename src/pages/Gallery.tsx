@@ -1,12 +1,11 @@
-import { useState } from 'react';
-import PhotoGallery from '@/components/PhotoGallery';
+import PhotoGallery from '@/components/PhotoGallery'; // No longer need useState if you're not managing dynamic uploads
 
 interface GalleryProps {
   visibleSections: Set<string>;
 }
 
 const Gallery = ({ visibleSections }: GalleryProps) => {
-  // Default meme images
+  // Default meme images - these will be your only images now
   const defaultMemes = [
     '/lovable-uploads/889669f0-046c-4ab7-957c-a54fc069465a.png',
     '/lovable-uploads/0fa66439-17cf-427c-909e-2b591853e249.png',
@@ -18,19 +17,16 @@ const Gallery = ({ visibleSections }: GalleryProps) => {
     '/lovable-uploads/9bd72442-5cd2-429c-8dbd-798a1b4e632f.png'
   ];
   
-  const [uploadedImages, setUploadedImages] = useState<string[]>(defaultMemes);
-
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
-    const imageUrls = files.map((file: File) => URL.createObjectURL(file));
-    setUploadedImages(prev => [...prev, ...imageUrls]);
-  };
+  // All state and functions related to uploading are removed.
+  // const [uploadedImages, setUploadedImages] = useState<string[]>(defaultMemes);
+  // const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => { /* ... */ };
 
   return (
-    <PhotoGallery 
+    <PhotoGallery
       visibleSections={visibleSections}
-      uploadedImages={uploadedImages}
-      onImageUpload={handleImageUpload}
+      uploadedImages={defaultMemes} // Pass defaultMemes directly as the source of images
+      // The onImageUpload prop is removed, which should trigger the PhotoGallery
+      // component to hide its upload UI if it's designed to do so.
     />
   );
 };

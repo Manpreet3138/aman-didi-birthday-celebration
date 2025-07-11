@@ -1,11 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input"; // Input is no longer used if the upload section is removed
 
 interface PhotoGalleryProps {
   visibleSections: Set<string>;
   uploadedImages: string[];
-  onImageUpload: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onImageUpload?: (event: React.ChangeEvent<HTMLInputElement>) => void; // This prop is now optional as per previous fix
 }
 
 const PhotoGallery = ({ visibleSections, uploadedImages, onImageUpload }: PhotoGalleryProps) => (
@@ -28,20 +28,23 @@ const PhotoGallery = ({ visibleSections, uploadedImages, onImageUpload }: PhotoG
         />
       </div>
       
-      <Card className={`celebration-card p-8 mb-8 ${
+      {/* The following Card component, which contained the "Upload More Memes" section,
+        has been completely removed as per your request.
+      */}
+      {/* <Card className={`celebration-card p-8 mb-8 ${
         visibleSections.has('section4') ? 'animate-slide-up animation-delay-300' : 'opacity-0'
       }`}>
         <div className="text-center mb-6">
           <p className="text-lg birthday-text font-semibold mb-4">Upload More Memes</p>
           <Input
             type="file"
-            accept="image/*"
+            accept="image/
             multiple
             onChange={onImageUpload}
             className="max-w-md mx-auto"
           />
         </div>
-      </Card>
+      </Card> */}
 
       {uploadedImages.length > 0 && (
         <div className={`${
