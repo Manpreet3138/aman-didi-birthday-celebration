@@ -41,7 +41,7 @@ const CongratulationsSection = ({ visibleSections, audioPlaying, audioRef }: Con
         <div className={`text-lg px-8 py-3 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold ${
           audioPlaying ? 'animate-pulse' : ''
         }`}>
-          🎵 {audioPlaying ? 'Playing Birthday Song!' : 'Song will play automatically!'} 🎵
+          🎵 {audioPlaying ? 'Playing Birthday Song!' : 'Click on top Right Play Button To Play Song!'} 🎵
         </div>
         
         <audio
